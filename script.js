@@ -69,8 +69,8 @@ function createResultFirstMsg(hasPlayerWon, playerSelection, computerSelection) 
 
 function createResultSecondMsg(hasPlayerWon, playerSelection, computerSelection) {
     if (hasPlayerWon) {
-        return playerSelection + " beats " + computerSelection + ".";
+        return playerSelection + " beats " + computerSelection;
     } else {
-        return playerSelection + " loses to " + computerSelection + ".";
+        return playerSelection + " loses to " + computerSelection;
     }
 }
