@@ -17,7 +17,7 @@ function playRound(playerSelection, computerSelection) {
     const resultDiv = document.querySelector('.output-result');
 
     if (playerSelection == computerSelection) {
-        resultDiv.textContent = 'TIE! Play again!';
+        resultDiv.textContent = 'tie. play again.';
     } else {
         // DOM
         const playerScoreText = document.querySelector('#player-score');
@@ -57,8 +57,8 @@ function determineHasPlayerWon(playerSelection, computerSelection) {
 
 function createStringForResult(hasPlayerWon, playerSelection, computerSelection) {
     if (hasPlayerWon) {
-        return "You win! " + playerSelection + " beats " + computerSelection;
+        return "you win. " + playerSelection + " beats " + computerSelection + ".";
     } else {
-        return "You lose! " + computerSelection + " beats " + playerSelection;
+        return "you lose. " + computerSelection + " beats " + playerSelection + ".";
     }
 }

@@ -1,3 +1,11 @@
+:root {
+    --base-font-size: 48px;
+}
+
+body {
+    font-size: var(--base-font-size);
+}
+
 body {
     background-color: #FBDE00;
     font-family: sans-serif;
@@ -8,7 +16,7 @@ body {
 
 .score-counter {
     display: flex;
-    width: 100px;
+    width: 500px;
     align-items: center;
     justify-content: space-between;
 }
@@ -16,6 +24,7 @@ body {
 h1 {
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }
 
 h3 {
@@ -24,4 +33,24 @@ h3 {
 
 .output-result {
     margin: 20px;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.button-holder button {
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    padding: 20px 40px;
+    font-size: 48px;
+}
+
+.score-counter h3 {
+    padding: 0;
+    margin: 0;
 }
