@@ -18,31 +18,31 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection == computerSelection) {
         resultDiv.textContent = 'TIE! Play again!';
-        return;
-        // return playRound(getPlayerChoice(), getComputerChoice());
     } else {
-    
-        let hasPlayerWon;
-
-        switch (playerSelection) {
-            case 'rock':
-                hasPlayerWon = (computerSelection == 'scissors');
-                break;
-            case 'paper':
-                hasPlayerWon = (computerSelection == 'rock');
-                break;
-            case 'scissors':
-                hasPlayerWon = (computerSelection == 'paper');
-                break;
-            default:
-                hasPlayerWon = false;
-        }
-
+        const hasPlayerWon = determineHasPlayerWon(playerSelection, computerSelection);
        
         resultDiv.textContent = createStringForResult(hasPlayerWon, playerSelection, computerSelection);
         return hasPlayerWon;
     }
 
+}
+
+function determineHasPlayerWon(playerSelection, computerSelection) {
+    switch (playerSelection) {
+        case 'rock':
+            hasPlayerWon = (computerSelection == 'scissors');
+            break;
+        case 'paper':
+            hasPlayerWon = (computerSelection == 'rock');
+            break;
+        case 'scissors':
+            hasPlayerWon = (computerSelection == 'paper');
+            break;
+        default:
+            hasPlayerWon = false;
+    }
+
+    return hasPlayerWon;
 }
 
 function createStringForResult(hasPlayerWon, playerSelection, computerSelection) {
