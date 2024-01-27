@@ -15,10 +15,12 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     const resultDiv = document.querySelector('.output-result');
+    const firstMsg = document.querySelector('.first-msg');
+    const secondMsg = document.querySelector('.second-msg');
 
     if (playerSelection == computerSelection) {
-        const firstMsg = document.createElement('para');
-        resultDiv.textContent = 'tie. <br> play again.';
+        firstMsg.textContent = "tie.";
+        secondMsg.textContent = "play again.";
     } else {
         // DOM
         const playerScoreText = document.querySelector('#player-score');
@@ -26,8 +28,9 @@ function playRound(playerSelection, computerSelection) {
 
         const hasPlayerWon = determineHasPlayerWon(playerSelection, computerSelection);
        
-        resultDiv.textContent = createStringForResult(hasPlayerWon, playerSelection, computerSelection);
-        
+        // resultDiv.textContent = createStringForResult(hasPlayerWon, playerSelection, computerSelection);
+        firstMsg.textContent = createResultFirstMsg(hasPlayerWon, playerSelection, computerSelection);
+        secondMsg.textContent = createResultSecondMsg(hasPlayerWon, playerSelection, computerSelection);
 
         if (hasPlayerWon) {
             playerScoreText.textContent = parseInt(playerScoreText.textContent) + 1; 
@@ -61,5 +64,21 @@ function createStringForResult(hasPlayerWon, playerSelection, computerSelection)
         return "you win. " + playerSelection + " beats " + computerSelection + ".";
     } else {
         return "you lost. " + playerSelection + " loses to " + computerSelection + ".";
+    }
+}
+
+function createResultFirstMsg(hasPlayerWon, playerSelection, computerSelection) {
+    if (hasPlayerWon) {
+        return "you win. ";
+    } else {
+        return "you lost. ";
+    }
+}
+
+function createResultSecondMsg(hasPlayerWon, playerSelection, computerSelection) {
+    if (hasPlayerWon) {
+        return playerSelection + " beats " + computerSelection + ".";
+    } else {
+        return playerSelection + " loses to " + computerSelection + ".";
     }
 }
