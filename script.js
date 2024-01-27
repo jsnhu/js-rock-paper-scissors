@@ -29,9 +29,12 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    const resultDiv = document.querySelector('.output-result');
     if (playerSelection == computerSelection) {
-        console.log('TIE! Play again!');
-        return playRound(getPlayerChoice(), getComputerChoice());
+        // console.log('TIE! Play again!');
+        resultDiv.textContent = 'TIE! Play again!';
+        return;
+        // return playRound(getPlayerChoice(), getComputerChoice());
     } else {
     
         let hasPlayerWon;
@@ -49,7 +52,10 @@ function playRound(playerSelection, computerSelection) {
             default:
                 hasPlayerWon = false;
         }
-        console.log(createStringForResult(hasPlayerWon, playerSelection, computerSelection));
+
+       
+        resultDiv.textContent = createStringForResult(hasPlayerWon, playerSelection, computerSelection);
+        // console.log(createStringForResult(hasPlayerWon, playerSelection, computerSelection));
         return hasPlayerWon;
     }
 
