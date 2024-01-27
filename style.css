@@ -44,8 +44,9 @@ h3 {
 
 .button-holder button {
     background-color: black;
+    font-weight: bold;
     border-radius: 20px;
-    color: white;
+    color: #FBDE00;
     padding: 20px 40px;
     font-size: 48px;
 }

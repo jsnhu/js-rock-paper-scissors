@@ -59,6 +59,6 @@ function createStringForResult(hasPlayerWon, playerSelection, computerSelection)
     if (hasPlayerWon) {
         return "you win. " + playerSelection + " beats " + computerSelection + ".";
     } else {
-        return "you lose. " + computerSelection + " beats " + playerSelection + ".";
+        return "you lost. " + playerSelection + " loses to " + computerSelection + ".";
     }
 }
