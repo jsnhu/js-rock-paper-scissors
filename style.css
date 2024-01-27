@@ -70,6 +70,10 @@ h3 {
     font-size: 48px;
 }
 
+.button-holder button:hover {
+    background-color: rgba(36, 36, 36, 0.775);
+}
+
 .score-counter h3 {
     padding: 0;
     margin: 0;
