@@ -33,18 +33,21 @@ h3 {
 }
 
 .output-result {
-    height: 30vh;
+    height: 20vh;
     max-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 0;
+    justify-content: center;
 }
 
 .output-result p {
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+.second-msg {
+    font-size: 32px;
 }
 
 .button-holder {

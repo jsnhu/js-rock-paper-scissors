@@ -19,8 +19,8 @@ function playRound(playerSelection, computerSelection) {
     const secondMsg = document.querySelector('.second-msg');
 
     if (playerSelection == computerSelection) {
-        firstMsg.textContent = "tie.";
-        secondMsg.textContent = "play again.";
+        firstMsg.textContent = "you tied";
+        secondMsg.textContent = "play again";
     } else {
         // DOM
         const playerScoreText = document.querySelector('#player-score');
@@ -59,19 +59,11 @@ function determineHasPlayerWon(playerSelection, computerSelection) {
     return hasPlayerWon;
 }
 
-function createStringForResult(hasPlayerWon, playerSelection, computerSelection) {
-    if (hasPlayerWon) {
-        return "you win. " + playerSelection + " beats " + computerSelection + ".";
-    } else {
-        return "you lost. " + playerSelection + " loses to " + computerSelection + ".";
-    }
-}
-
 function createResultFirstMsg(hasPlayerWon, playerSelection, computerSelection) {
     if (hasPlayerWon) {
-        return "you win. ";
+        return "you win ";
     } else {
-        return "you lost. ";
+        return "you lost ";
     }
 }
 
