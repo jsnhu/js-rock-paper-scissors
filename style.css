@@ -16,7 +16,7 @@ body {
 
 .score-counter {
     display: flex;
-    width: 500px;
+    width: 60vw;
     align-items: center;
     justify-content: space-between;
 }
@@ -32,7 +32,11 @@ h3 {
 }
 
 .output-result {
-    margin: 20px;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-holder {
@@ -40,6 +44,7 @@ h3 {
     justify-content: space-between;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .button-holder button {
