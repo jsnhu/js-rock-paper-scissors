@@ -12,16 +12,7 @@ buttons.forEach((button) => {
 
 
 
-function getPlayerChoice() {
-    let choice = prompt("Choose! Rock, paper, or scissors?").toLowerCase();
 
-    if (choices.includes(choice)) {
-        return choice;
-    } else {
-        console.log('INVALID CHOICE! Try again.');
-        return getPlayerChoice();
-    }
-}
 
 function getComputerChoice() {
     randChoiceIndex = Math.floor(Math.random()*3);
@@ -30,8 +21,8 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     const resultDiv = document.querySelector('.output-result');
+
     if (playerSelection == computerSelection) {
-        // console.log('TIE! Play again!');
         resultDiv.textContent = 'TIE! Play again!';
         return;
         // return playRound(getPlayerChoice(), getComputerChoice());
