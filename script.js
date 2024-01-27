@@ -19,10 +19,20 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         resultDiv.textContent = 'TIE! Play again!';
     } else {
+        // DOM
+        const playerScoreText = document.querySelector('#player-score');
+        const computerScoreText = document.querySelector('#computer-score');
+
         const hasPlayerWon = determineHasPlayerWon(playerSelection, computerSelection);
        
         resultDiv.textContent = createStringForResult(hasPlayerWon, playerSelection, computerSelection);
-        return hasPlayerWon;
+        
+
+        if (hasPlayerWon) {
+            playerScoreText.textContent = parseInt(playerScoreText.textContent) + 1; 
+        } else {
+            computerScoreText.textContent = parseInt(computerScoreText.textContent) + 1;
+        }
     }
 
 }
