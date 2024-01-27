@@ -12,13 +12,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
 .score-counter {
     display: flex;
     width: 60vw;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 h1 {
@@ -41,7 +42,7 @@ h3 {
 
 .button-holder {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
@@ -53,6 +54,8 @@ h3 {
     border-radius: 20px;
     color: #FBDE00;
     padding: 20px 40px;
+    width: 90vw;
+    max-width: 320px;
     font-size: 48px;
 }
 

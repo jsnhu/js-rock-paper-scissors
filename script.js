@@ -17,7 +17,8 @@ function playRound(playerSelection, computerSelection) {
     const resultDiv = document.querySelector('.output-result');
 
     if (playerSelection == computerSelection) {
-        resultDiv.textContent = 'tie. play again.';
+        const firstMsg = document.createElement('para');
+        resultDiv.textContent = 'tie. <br> play again.';
     } else {
         // DOM
         const playerScoreText = document.querySelector('#player-score');
