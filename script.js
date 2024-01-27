@@ -40,7 +40,6 @@ function playRound(playerSelection, computerSelection) {
 
        
         resultDiv.textContent = createStringForResult(hasPlayerWon, playerSelection, computerSelection);
-        // console.log(createStringForResult(hasPlayerWon, playerSelection, computerSelection));
         return hasPlayerWon;
     }
 
