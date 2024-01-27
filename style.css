@@ -1,5 +1,5 @@
 body {
-    background-color: #ccc;
+    background-color: #FBDE00;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -11,4 +11,17 @@ body {
     width: 100px;
     align-items: center;
     justify-content: space-between;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.output-result {
+    margin: 20px;
 }
