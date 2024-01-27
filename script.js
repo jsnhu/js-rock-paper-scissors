@@ -8,12 +8,6 @@ buttons.forEach((button) => {
     });
 });
 
-
-
-
-
-
-
 function getComputerChoice() {
     randChoiceIndex = Math.floor(Math.random()*3);
     return choices[randChoiceIndex];
@@ -58,20 +52,4 @@ function createStringForResult(hasPlayerWon, playerSelection, computerSelection)
     } else {
         return "You lose! " + computerSelection + " beats " + playerSelection;
     }
-}
-
-function game() {
-    let computerWins = 0;
-    let playerWins = 0;
-
-    while (computerWins < 3 && playerWins < 3) {
-        console.log(playerWins + " to " + computerWins);
-        hasPlayerWon = playRound(getPlayerChoice(), getComputerChoice());
-        if (hasPlayerWon) {
-            playerWins++;
-        } else {
-            computerWins++;
-        }
-    }
-    return 'FINISHED: ' + playerWins + ' to ' + computerWins;
 }
