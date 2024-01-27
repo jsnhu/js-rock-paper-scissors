@@ -1,5 +1,17 @@
 const choices = ['rock', 'paper', 'scissors'];
 
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        playRound(button.textContent.toLowerCase(), getComputerChoice())
+    });
+});
+
+
+
+
+
 function getPlayerChoice() {
     let choice = prompt("Choose! Rock, paper, or scissors?").toLowerCase();
 
