@@ -61,7 +61,7 @@ function determineHasPlayerWon(playerSelection, computerSelection) {
 
 function createResultFirstMsg(hasPlayerWon, playerSelection, computerSelection) {
     if (hasPlayerWon) {
-        return "you win ";
+        return "you won ";
     } else {
         return "you lost ";
     }
